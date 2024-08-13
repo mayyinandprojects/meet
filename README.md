@@ -2,6 +2,10 @@
 
 Meet is an event discovery app built with React that allows users to browse and explore upcoming events across various cities. The app provides a seamless user experience with features that enable filtering events by city, showing or hiding event details, and specifying the number of events displayed. Users can access cached event data when offline and are notified when changes to search settings cannot be applied due to lack of internet connection. Additionally, the app can be installed as a shortcut on the home screen for quick access. Visual data representations are provided through charts that display the number of upcoming events in each city, helping users make informed decisions about their event attendance.
 
+# Live Link
+View the project online:
+https://mayyinandprojects.github.io/meet/
+
 # User Stories
 
 # Feature 1: Filter Events By City
