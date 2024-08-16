@@ -22,7 +22,6 @@ functions:
 
 
 
-
 #default template provided by serverless.yml:
 # functions:
 #   hello:
