@@ -37,6 +37,10 @@ module.exports.getAuthURL = async () => {
   };
 };
 
+module.exports.getAccessToken = async (event) => {
+  //code will go in here
+}
+
 // Course notes: 
 // Here’s a brief explanation of the contents in the code just shown:
 
