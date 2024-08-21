@@ -1,3 +1,4 @@
+//components/CitySearch.js
 import { useState } from "react";
 
 const CitySearch = ({allLocations}) => {
@@ -23,8 +24,6 @@ const CitySearch = ({allLocations}) => {
   };
 
   
-//   console.log(allLocations);
-//   console.log(allLocations);
   
   return (
     <div id="city-search">
