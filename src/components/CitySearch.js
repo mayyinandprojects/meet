@@ -23,6 +23,7 @@ const CitySearch = ({allLocations}) => {
     setShowSuggestions(false); // to hide the list
   };
 
+  console.log(allLocations);
   
   
   return (
