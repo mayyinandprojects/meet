@@ -1,3 +1,4 @@
+//Event.test.js
 import { render, screen, fireEvent } from '@testing-library/react';
 import Event from '../components/Event';
 
@@ -35,6 +36,17 @@ describe('<Event /> component', () => {
   test('renders "Show details" button initially', () => {
     expect(EventComponent.queryByText('Show details')).toBeInTheDocument();
   });
+
+  test('renders fallback text when event start time is not available', () => {
+    const eventWithoutDateTime = {
+      ...mockEvent,
+      start: {}, // Simulating missing dateTime
+    };
+    const { getByText } = render(<Event event={eventWithoutDateTime} />);
+    expect(getByText('Start time not available')).toBeInTheDocument();
+  });
+  
+
 });
 
 describe('<Event /> component expanded view', () => {
