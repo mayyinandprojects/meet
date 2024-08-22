@@ -10,11 +10,18 @@ import mockData from './mock-data';
  * It will also remove all duplicates by creating another new array using the spread operator and spreading a Set.
  * The Set will remove all duplicates from the array.
  */
+// export const extractLocations = (events) => {
+//   const extractedLocations = events[0].items.map((event) => event.location);
+//   const locations = [...new Set(extractedLocations)];
+//   return locations;
+// };
+
 export const extractLocations = (events) => {
-  const extractedLocations = events[0].items.map((event) => event.location);
+  const extractedLocations = events.map((event) => event.location);
   const locations = [...new Set(extractedLocations)];
   return locations;
 };
+
 
 /**
  *
