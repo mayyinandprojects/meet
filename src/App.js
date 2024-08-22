@@ -9,6 +9,7 @@ import './App.css';
 const App = () => {
   const [allLocations, setAllLocations] = useState([]);
   const [events, setEvents] = useState([]);
+
   const [numberOfEvents, setNumberOfEvents] = useState(32);
 
   useEffect(() => {
@@ -22,14 +23,35 @@ const App = () => {
     fetchEvents();
   }, [numberOfEvents]);
 
+  // const [currentNOE, setCurrentNOE] = useState(32);
+
+  // const fetchData = async () => {
+  //   const allEvents = await getEvents();
+  //   setEvents(allEvents.slice(0, currentNOE));
+  // }
+
+
+
+
+
   const handleNumberOfEventsChange = (event) => {
     setNumberOfEvents(event.target.value);
   };
 
+
+
+
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
+
+  // console.log(currentNOE);
+
   return (
     <div className="App">
       <CitySearch allLocations={allLocations} />
-      <NumberOfEvents numberOfEvents={numberOfEvents} onNumberOfEventsChange={handleNumberOfEventsChange} />
+      {/* <NumberOfEvents numberOfEvents={numberOfEvents} onNumberOfEventsChange={handleNumberOfEventsChange} /> */}
+      <NumberOfEvents />
       <EventList events={events} />
     </div>
   );

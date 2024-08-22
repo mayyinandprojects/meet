@@ -14,6 +14,8 @@ const Event = ({ event }) => {
     ? new Date(event.start.dateTime).toLocaleString()
     : 'Start time not available';
 
+  console.log(event);
+
   return (
     <li className="event" role="listitem">
       {/* Test 1: Render event title */}
