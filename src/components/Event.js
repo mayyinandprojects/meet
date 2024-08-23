@@ -28,7 +28,7 @@ const Event = ({ event }) => {
       <p className="event-location">{event.location || 'Location not available'}</p>
 
       {/* Show "Show details" or "Hide details" button based on state */}
-      <button className="details-button" onClick={handleDetailsToggle}>
+      <button className="details-button btn-primary" onClick={handleDetailsToggle}>
         {showDetails ? 'Hide details' : 'Show details'}
       </button>
 
