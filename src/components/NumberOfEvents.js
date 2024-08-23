@@ -1,13 +1,13 @@
 // src/components/NumberOfEvents.js
 import React, { useState } from 'react';
 
-const NumberOfEvents = ({ numberOfEvents, onNumberOfEventsChange }) => {
-  const [inputValue, setInputValue] = useState(numberOfEvents);
+const NumberOfEvents = ({ currentNOE, setCurrentNOE }) => {
+  const [inputValue, setInputValue] = useState(currentNOE);
 
   const handleInputChange = (event) => {
     const value = event.target.value;
     setInputValue(value);
-    onNumberOfEventsChange(event); // Call the parent handler
+    setCurrentNOE(event); // Call the parent handler
   };
 
   return (
