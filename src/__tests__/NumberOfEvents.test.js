@@ -5,14 +5,14 @@ import NumberOfEvents from '../components/NumberOfEvents';
 
 describe('<NumberOfEvents /> component', () => {
   test('renders NumberOfEvents component', () => {
-    render(<NumberOfEvents numberOfEvents={32} onNumberOfEventsChange={() => {}} />);
+    render(<NumberOfEvents currentNOE={32} onNumberOfEventsChange={() => {}} />);
     
-    const numberOfEventsElement = screen.getByLabelText(/Number of Events:/i);
-    expect(numberOfEventsElement).toBeInTheDocument();
+    const currentNOEElement = screen.getByLabelText(/Number of Events:/i);
+    expect(currentNOEElement).toBeInTheDocument();
   });
 
   test('renders with default value of 32', () => {
-    render(<NumberOfEvents numberOfEvents={32} onNumberOfEventsChange={() => {}} />);
+    render(<NumberOfEvents currentNOE={32} setCurrentNOE={() => {}} />);
     
     const numberInput = screen.getByLabelText(/Number of Events:/i);
     expect(numberInput.value).toBe('32');
@@ -20,7 +20,7 @@ describe('<NumberOfEvents /> component', () => {
 
   test("updates the textbox's value when user types in it", async () => {
     const handleNumberOfEventsChange = jest.fn();
-    render(<NumberOfEvents numberOfEvents={32} onNumberOfEventsChange={handleNumberOfEventsChange} />);
+    render(<NumberOfEvents currentNOE={32} setCurrentNOE={handleNumberOfEventsChange} />);
 
     const numberInput = screen.getByLabelText(/Number of Events:/i);
     
