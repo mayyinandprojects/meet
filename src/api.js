@@ -16,6 +16,34 @@ import mockData from './mock-data';
 //   return locations;
 // };
 
+export const getAccessToken = async () => {
+  const accessToken = localStorage.getItem('access_token');
+
+  const tokenCheck = accessToken && (await checkToken(accessToken));
+
+  if (!accessToken || tokenCheck.error) {
+    await localStorage.removeItem("access_token");
+    const searchParams = new URLSearchParams(window.location.search);
+    const code = await searchParams.get("code");
+    if (!code) {
+      // const response = await fetch(
+      //   "https://accounts.google.com/o/oauth2/v2/auth?access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.events.public.readonly&response_type=code&client_id=491947521354-7h2bqnoodenr0o0md30qqtmv567rpfcr.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fmayyinandprojects.github.io%2Fmeet%2F"
+      // );
+      const response = await fetch(
+        "https://ywrs4jjbkj.execute-api.us-east-1.amazonaws.com/dev/api/get-auth-url"
+      );
+      const result = await response.json();
+      const { authUrl } = result;
+      return (window.location.href = authUrl);
+    }
+    return code && getToken(code);
+  }
+  return accessToken;
+
+  
+};
+
+
 export const extractLocations = (events) => {
   const extractedLocations = events.map((event) => event.location);
   const locations = [...new Set(extractedLocations)];
@@ -80,29 +108,6 @@ export const getEvents = async () => {
 
 };
 
-export const getAccessToken = async () => {
-  const accessToken = localStorage.getItem('access_token');
-
-  const tokenCheck = accessToken && (await checkToken(accessToken));
-
-  if (!accessToken || tokenCheck.error) {
-    await localStorage.removeItem("access_token");
-    const searchParams = new URLSearchParams(window.location.search);
-    const code = await searchParams.get("code");
-    if (!code) {
-      const response = await fetch(
-        "https://accounts.google.com/o/oauth2/v2/auth?access_type=offline&scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.events.public.readonly&response_type=code&client_id=491947521354-7h2bqnoodenr0o0md30qqtmv567rpfcr.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fmayyinandprojects.github.io%2Fmeet%2F"
-      );
-      const result = await response.json();
-      const { authUrl } = result;
-      return (window.location.href = authUrl);
-    }
-    return code && getToken(code);
-  }
-  return accessToken;
-
-  
-};
 
 
 
