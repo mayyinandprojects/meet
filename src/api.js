@@ -94,6 +94,13 @@ export const getEvents = async () => {
     return mockData;
   }
 
+  // NProgress.start();
+
+  // if (window.location.href.startsWith("http://localhost")) {
+  //   NProgress.done();
+  //   return mockData;
+  // }
+
   const token = await getAccessToken();
 
   if (token) {
