@@ -28,13 +28,13 @@ const Event = ({ event }) => {
       <p className="event-location">{event.location || 'Location not available'}</p>
 
       {/* Show "Show details" or "Hide details" button based on state */}
-      <button className="details-button btn-primary" onClick={handleDetailsToggle}>
+      <button className="details-button btn-primary" data-testid = "details-button" onClick={handleDetailsToggle}>
         {showDetails ? 'Hide details' : 'Show details'}
       </button>
 
       {/* Conditionally render the event details based on showDetails state */}
       {showDetails && (
-        <div className="event-details">
+        <div className="event-details" data-testid="event-details">
           {/* Test 5: Render event description with a fallback value */}
           <p className="event-description">{event.description || 'No description available'}</p>
         </div>
