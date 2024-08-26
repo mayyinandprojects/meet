@@ -28,7 +28,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --watchAll=false --coverage",
+    "test": "react-scripts test --env=jsdom",
     "coverage": "react-scripts test --env=jsdom --watchAll=false --coverage",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -54,6 +54,7 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.1",
-    "jest-cucumber": "^4.5.0"
+    "jest-cucumber": "^4.5.0",
+    "puppeteer": "^18.1.0"
   }
 }
