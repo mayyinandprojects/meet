@@ -1,3 +1,4 @@
+import Header from './components/Header'; 
 import CitySearch from './components/CitySearch';
 import EventList from './components/EventList';
 import NumberOfEvents from './components/NumberOfEvents';
@@ -27,6 +28,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <Header />
       <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
       <NumberOfEvents currentNOE={currentNOE} setCurrentNOE={setCurrentNOE} />
       <EventList events={events} />

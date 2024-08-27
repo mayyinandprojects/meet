@@ -18,7 +18,7 @@ const NumberOfEvents = ({ currentNOE, setCurrentNOE }) => {
 
   return (
     <div>
-      <label htmlFor="number-of-events-input">Number of Events:</label>
+      <h4><label htmlFor="number-of-events-input">Number of Events: </label></h4>
       <input
         id="number-of-events-input"
         role ="number-of-events-input"
@@ -27,6 +27,7 @@ const NumberOfEvents = ({ currentNOE, setCurrentNOE }) => {
         onChange={handleInputChange}
         aria-label="Number of Events"
       />
+      <hr />
     </div>
   );
 };

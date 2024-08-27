@@ -89,6 +89,7 @@ header h1 {
 .btn-primary {
   background-color: #008080; /* Teal button color */
   border-color: #008080;
+  color: white;
 }
 
 .btn-primary:hover {
@@ -133,11 +134,42 @@ li:last-child {
   background: linear-gradient(to right, #008080, #4b0082); /* Teal to purple gradient */
   color: #ffffff; /* White text color for contrast */
   padding: 20px;
-  border-radius: 8px;
+}
+
+input {
+  text-align: center;
+}
+
+#city-search {
+  margin: 5px;
 }
 
 .event-details{
   margin-top: 1%;
   margin-left: 20%;
   margin-right: 20%;
+}
+
+.header-container {
+  padding: 60px 20px;
+  margin-bottom: 20px;
+  text-align: center; /* Center the text */
+}
+
+.header-content {
+  max-width: 900px; /* Limit the content width */
+  margin: 0 auto; /* Center the content */
+}
+
+.header-container h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.header-container p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-top: 10px;
 }
