@@ -34,6 +34,7 @@ const CitySearch = ({ allLocations, setCurrentCity }) => {
   
   return (
     <div id="city-search">
+      <h4><label htmlFor="locations-input">Choose a location: </label></h4>
       <input
         type="text"
         className="city"
