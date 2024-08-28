@@ -1,20 +1,29 @@
 // src/components/NumberOfEvents.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const NumberOfEvents = ({ currentNOE, setCurrentNOE }) => {
+const NumberOfEvents = ({ currentNOE, setCurrentNOE, setErrorAlert }) => {
   const [inputValue, setInputValue] = useState(currentNOE);
 
-  // const handleInputChange = (event) => {
-  //   const value = event.target.value;
-  //   setInputValue(value);
-  //   setCurrentNOE(event); 
-  // };
 
   const handleInputChange = (event) => {
     const value = Number(event.target.value); // Convert to number if needed
     setInputValue(value);
     setCurrentNOE(value); // Pass the value, not the event
+
+    let infoText;
+    if (value  <= 0 && isNaN()) {
+      infoText =
+        "Only positive numbers are allowed";
+    } else {
+      infoText = "";
+    }
+    setErrorAlert(infoText);
+  
   };
+
+  useEffect(() => {
+    setCurrentNOE(currentNOE);
+  }, currentNOE);
 
   return (
     <div>
