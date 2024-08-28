@@ -21,9 +21,9 @@ const NumberOfEvents = ({ currentNOE, setCurrentNOE, setErrorAlert }) => {
   
   };
 
-  useEffect(() => {
-    setCurrentNOE(currentNOE);
-  }, currentNOE);
+  // useEffect(() => {
+  //   setCurrentNOE(currentNOE);
+  // }, currentNOE);
 
   return (
     <div>
