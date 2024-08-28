@@ -11,7 +11,7 @@ const NumberOfEvents = ({ currentNOE, setCurrentNOE, setErrorAlert }) => {
     setCurrentNOE(value); // Pass the value, not the event
 
     let infoText;
-    if (value  <= 0 && isNaN()) {
+    if (value  <= 0 || isNaN(value)) {
       infoText =
         "Only positive numbers are allowed";
     } else {
@@ -21,9 +21,6 @@ const NumberOfEvents = ({ currentNOE, setCurrentNOE, setErrorAlert }) => {
   
   };
 
-  // useEffect(() => {
-  //   setCurrentNOE(currentNOE);
-  // }, currentNOE);
 
   return (
     <div>
