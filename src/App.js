@@ -5,6 +5,7 @@ import EventList from './components/EventList';
 import NumberOfEvents from './components/NumberOfEvents';
 import EventGenresChart from './components/EventGenresChart';
 import CityEventsChart from './components/CityEventsChart';
+import Footer from './components/Footer';
 import { useEffect, useState } from 'react';
 import { extractLocations, getEvents } from './api';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -58,6 +59,7 @@ const App = () => {
       <CityEventsChart allLocations={allLocations} events={events} />
       </div>
       <EventList events={events} />
+      <Footer />
     </div>
   );
 }

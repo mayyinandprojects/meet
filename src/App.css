@@ -40,30 +40,26 @@
   }
 }
 
-/* General body styling */
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #f4f4f4;
-  /* Light grey background for a calm look */
   color: #333;
-  /* Dark grey text color for readability */
   margin: 0;
   padding: 0;
+  margin-left: 12rem;
+  margin-right: 12rem;
 }
 
-/* Container to center the content and add some padding */
+
 .container {
   margin-top: 20px;
   padding: 20px;
   background: #ffffff;
-  /* White background for the main content area */
   border-radius: 8px;
-  /* Rounded corners for a modern look */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow for depth */
 }
 
-/* Header styling */
+
 header {
   text-align: center;
   margin-bottom: 20px;
@@ -71,12 +67,11 @@ header {
 
 header h1 {
   color: #008080;
-  /* Teal color for the main header */
   font-size: 2.5rem;
   margin: 0;
 }
 
-/* Form styling */
+
 .form-group {
   margin-bottom: 1rem;
 }
@@ -84,7 +79,6 @@ header h1 {
 .form-label {
   font-weight: bold;
   color: #4b0082;
-  /* Darker purple for labels */
 }
 
 .form-control {
@@ -93,68 +87,46 @@ header h1 {
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
 }
 
-/* Button styling */
+
 .btn-primary {
   background-color: #008080;
-  /* Teal button color */
   border-color: #008080;
   color: white;
 }
 
 .btn-primary:hover {
   background-color: #005757;
-  /* Darker teal on hover */
   border-color: #004d4d;
 }
 
-/* List styling */
+
 ul {
   padding-left: 0;
-  /* Remove default padding */
   list-style-type: none;
-  /* Remove bullet points */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-li {
+.event {
   padding: 0.5rem 0;
-  border-bottom: 1px solid #e9ecef;
-  /* Light grey border between list items */
+  border-top: 1px solid #d4d5d6;
+  border-right: 1px solid #d4d5d6;
 }
 
-li:last-child {
-  border-bottom: none;
-  /* Remove border from the last item */
+.event:nth-child(odd) {
+  border-left: 1px solid #d4d5d6; /* Left border for the first column */
 }
 
-/* Card component styling (if you're using Bootstrap cards) */
-.card {
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow */
+.event:last-child, .event:nth-last-child(2) {
+  border-bottom: 1px solid #d4d5d6;
 }
 
-.card-header {
-  background: #e0e0e0;
-  /* Light grey header background */
-  color: #333;
-  /* Dark grey text color */
-  font-weight: bold;
-}
 
-.card-body {
-  background: #ffffff;
-  /* White background for card content */
-}
-
-/* Gradient background for special sections */
 .gradient-bg {
   background: linear-gradient(to right,
       #008080,
       #4b0082);
-  /* Teal to purple gradient */
   color: #ffffff;
-  /* White text color for contrast */
   padding: 20px;
 }
 
@@ -176,14 +148,11 @@ input {
   padding: 60px 20px;
   margin-bottom: 20px;
   text-align: center;
-  /* Center the text */
 }
 
 .header-content {
   max-width: 900px;
-  /* Limit the content width */
   margin: 0 auto;
-  /* Center the content */
 }
 
 .header-container h1 {
@@ -208,13 +177,56 @@ input {
 }
 
 .charts-container {
-  display: grid; 
+  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+  margin-bottom: 3rem;
+}
+
+
+.footer {
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 10px 0;
+}
+
+.footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.back-to-top {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.city {
+  min-width: 400px;
 }
 
 @media (max-width: 768px) {
+  body {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
   .charts-container {
     grid-template-columns: 1fr;
+  }
+
+  ul {
+    grid-template-columns: 1fr;
+  }
+
+  .event:last-child{
+    border-bottom: 1px solid #d4d5d6;
   }
 }
