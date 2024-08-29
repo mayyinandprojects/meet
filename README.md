@@ -104,7 +104,7 @@ The development process for Meet utilizes CI/CD (Continuous Integration and Cont
     ```bash
     cd meet
 
-Run the app:.
+Run the app:
     ```bash
     npm start
 
