@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 .App {
   text-align: center;
@@ -34,6 +34,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -41,9 +42,11 @@
 
 /* General body styling */
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #f4f4f4; /* Light grey background for a calm look */
-  color: #333; /* Dark grey text color for readability */
+  font-family: "Montserrat", sans-serif;
+  background-color: #f4f4f4;
+  /* Light grey background for a calm look */
+  color: #333;
+  /* Dark grey text color for readability */
   margin: 0;
   padding: 0;
 }
@@ -52,9 +55,12 @@ body {
 .container {
   margin-top: 20px;
   padding: 20px;
-  background: #ffffff; /* White background for the main content area */
-  border-radius: 8px; /* Rounded corners for a modern look */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  background: #ffffff;
+  /* White background for the main content area */
+  border-radius: 8px;
+  /* Rounded corners for a modern look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
 }
 
 /* Header styling */
@@ -64,7 +70,8 @@ header {
 }
 
 header h1 {
-  color: #008080; /* Teal color for the main header */
+  color: #008080;
+  /* Teal color for the main header */
   font-size: 2.5rem;
   margin: 0;
 }
@@ -76,63 +83,78 @@ header h1 {
 
 .form-label {
   font-weight: bold;
-  color: #4b0082; /* Darker purple for labels */
+  color: #4b0082;
+  /* Darker purple for labels */
 }
 
 .form-control {
   border-radius: 4px;
   border: 1px solid #ced4da;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
 }
 
 /* Button styling */
 .btn-primary {
-  background-color: #008080; /* Teal button color */
+  background-color: #008080;
+  /* Teal button color */
   border-color: #008080;
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #005757; /* Darker teal on hover */
+  background-color: #005757;
+  /* Darker teal on hover */
   border-color: #004d4d;
 }
 
 /* List styling */
 ul {
-  padding-left: 0; /* Remove default padding */
-  list-style-type: none; /* Remove bullet points */
+  padding-left: 0;
+  /* Remove default padding */
+  list-style-type: none;
+  /* Remove bullet points */
 }
 
 li {
   padding: 0.5rem 0;
-  border-bottom: 1px solid #e9ecef; /* Light grey border between list items */
+  border-bottom: 1px solid #e9ecef;
+  /* Light grey border between list items */
 }
 
 li:last-child {
-  border-bottom: none; /* Remove border from the last item */
+  border-bottom: none;
+  /* Remove border from the last item */
 }
 
 /* Card component styling (if you're using Bootstrap cards) */
 .card {
   border: none;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
 }
 
 .card-header {
-  background: #e0e0e0; /* Light grey header background */
-  color: #333; /* Dark grey text color */
+  background: #e0e0e0;
+  /* Light grey header background */
+  color: #333;
+  /* Dark grey text color */
   font-weight: bold;
 }
 
 .card-body {
-  background: #ffffff; /* White background for card content */
+  background: #ffffff;
+  /* White background for card content */
 }
 
 /* Gradient background for special sections */
 .gradient-bg {
-  background: linear-gradient(to right, #008080, #4b0082); /* Teal to purple gradient */
-  color: #ffffff; /* White text color for contrast */
+  background: linear-gradient(to right,
+      #008080,
+      #4b0082);
+  /* Teal to purple gradient */
+  color: #ffffff;
+  /* White text color for contrast */
   padding: 20px;
 }
 
@@ -144,7 +166,7 @@ input {
   margin: 5px;
 }
 
-.event-details{
+.event-details {
   margin-top: 1%;
   margin-left: 20%;
   margin-right: 20%;
@@ -153,12 +175,15 @@ input {
 .header-container {
   padding: 60px 20px;
   margin-bottom: 20px;
-  text-align: center; /* Center the text */
+  text-align: center;
+  /* Center the text */
 }
 
 .header-content {
-  max-width: 900px; /* Limit the content width */
-  margin: 0 auto; /* Center the content */
+  max-width: 900px;
+  /* Limit the content width */
+  margin: 0 auto;
+  /* Center the content */
 }
 
 .header-container h1 {
@@ -180,4 +205,16 @@ input {
   left: 20px;
   width: 250px;
   z-index: 1000;
+}
+
+.charts-container {
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .charts-container {
+    grid-template-columns: 1fr;
+  }
 }
