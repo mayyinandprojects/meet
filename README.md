@@ -104,17 +104,17 @@ The development process for Meet utilizes CI/CD (Continuous Integration and Cont
     ```bash
     cd meet
 
-Run the app:
+3. Run the app:
     ```bash
     npm start
 
 ## Testing
 
-Unit and Integration Tests: Run using Jest.
+1. Unit and Integration Tests: Run using Jest.
     ```bash
     npm run test
 
-End-to-End Tests: Run using Puppeteer.
+2. End-to-End Tests: Run using Puppeteer.
     ```bash
     npm run test:e2e
 
