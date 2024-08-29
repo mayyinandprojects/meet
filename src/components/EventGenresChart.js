@@ -58,10 +58,18 @@ const EventGenresChart = ({ events }) => {
             outerRadius={130}
           >
             {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={colors[index]} />
+              <Cell 
+              key={`cell-${index}`} 
+              fill={colors[index]} 
+              />
             ))}
           </Pie>
-          <Legend align="center" verticalAlign="bottom" layout="horizontal" height={2} />
+          <Legend 
+          align="center" 
+          verticalAlign="bottom" 
+          layout="horizontal" 
+          height={2} 
+          />
         </PieChart>
       </ResponsiveContainer>
     );
