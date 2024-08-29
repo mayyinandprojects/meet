@@ -114,9 +114,9 @@ The development process for Meet utilizes CI/CD (Continuous Integration and Cont
     ```bash
     npm run test
 
-2. End-to-End Tests: Run using Puppeteer.
+2. End-to-End Tests: Run using Puppeteer (Switch headless mode to true in EndtoEnd.tests.js).
     ```bash
-    npm run test:e2e
+    npm run test
 
 ## License
 This project is made solely for educational purpose as part of Career Foundry Fullstack Development Course. This is released under the MIT License.
