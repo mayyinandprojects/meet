@@ -210,6 +210,7 @@ input {
 
 .city {
   min-width: 400px;
+  max-width: 700px;
 }
 
 .suggestions li {
